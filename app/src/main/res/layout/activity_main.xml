@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:openDrawer="end"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/suchipotro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="@string/suchiprotro"
+                        android:textColor="@color/white"
+                        android:textSize="34sp" />
+        </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_weight="8.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:id="@+id/gridLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="1">
+
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN1"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN2"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN3"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN4"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN5"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN6"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN7"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN8"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN9"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN10"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN11"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN12"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN13"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN14"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN15"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN16"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN17"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN18"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN19"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN20"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN21"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN22"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN23"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN24"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN25"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN26"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN27"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN28"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN29"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN30"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN31"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN32"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN33"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN34"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN35"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN36"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN37"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN38"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN39"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/SN40"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:foreground="@drawable/click_event"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="10dp"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="start|center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:paddingLeft="15dp"
+
+                                    android:text="@string/SN41"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </GridLayout>
+                </ScrollView>
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navication"
+        android:background="#fff"
+        app:menu="@menu/navication_menu_item"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header">
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

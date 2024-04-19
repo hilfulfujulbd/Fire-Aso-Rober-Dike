@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">হে যুবক ফিরে এসো রবের দিকে</string>
+
+    <string name="suchiprotro">সুচিপত্রঃ</string>
+
+    <string name="book_info">বই সম্পর্কে</string>
+
+    <string name="SN1">১। অনুবাদকের কথা</string>
+    <string name="SN2">২। হে যুবক! ফিরে এসো রবের দিকে</string>
+    <string name="SN3">৩। তারুণ্য উম্মাহর প্রাণশক্তি</string>
+    <string name="SN4">৪। তরুণ সাহাবি হযরত মুসআব ইবনে উমায়ের রা.</string>
+    <string name="SN5">৫। তারুণ্য উম্মাহর আশার প্রদীপ</string>
+    <string name="SN6">৬। তরুণ প্রজন্মকে ভ্রষ্টতা থেকে বেরিয়ে আসতে হবে</string>
+    <string name="SN7">৭। নামাজের প্রতি যুবকদের যত্নবান হতে হবে</string>
+    <string name="SN8">৮। জীবনের প্রকৃত মাকসাদ</string>
+    <string name="SN9">৯। প্রয়োজন আত্মজিজ্ঞাসা</string>
+    <string name="SN10">১০। নামাজের প্রতি যত্নবান না হওয়ার কারণ</string>
+    <string name="SN11">১১। উদাসীনতা এক ভয়ংকর রোগ</string>
+    <string name="SN12">১২। গাফলতের নিদর্শন</string>
+    <string name="SN13">১৩। সালাফদের সতর্কতা</string>
+    <string name="SN14">১৪। উদাসীনতা মানুষকে সঠিক পথ থেকে বিরত রাখে</string>
+    <string name="SN15">১৫। কতিপয় হৃদয়বিদারক ঘটনা</string>
+    <string name="SN16">১৬। মৃত্যুর সময় ভুলে গেছে কালিমা</string>
+    <string name="SN17">১৭। নামাজ না পড়া তরুণের করুণ পরিণতি</string>
+    <string name="SN18">১৮। মৃত্যুর সময় কুরআন পড়ছিল এক যুবক</string>
+    <string name="SN19">১৯। যুবকের সৌভাগ্যের মৃত্যু</string>
+    <string name="SN20">২০। তরুণ প্রজন্মের হৃদয়ে ঈমানের পরিচর্যা</string>
+    <string name="SN21">২১। যুবকদের জ্ঞান অর্জন</string>
+    <string name="SN22">২২। জ্ঞান অর্জনের ফজিলত</string>
+    <string name="SN23">২৩। জ্ঞান অর্জনকারীর গুণাবলি</string>
+    <string name="SN24">২৪। রাতের বেলা ইবাদত করা</string>
+    <string name="SN25">২৫। যুবকদের মর্যাদা</string>
+    <string name="SN26">২৬। যুবকদের প্রতি জান্নাতের হাতছানি</string>
+    <string name="SN27">২৭। যুবসমাজের অবক্ষয় ও তার পরিবর্তন</string>
+    <string name="SN28">২৮। হে যুবক! এসো আত্মশুদ্ধির মোহনায়</string>
+    <string name="SN29">২৯। সৎ ব্যক্তিদের সংস্পর্শ</string>
+    <string name="SN30">৩০। নীড়ে ফেরার গল্প</string>
+    <string name="SN31">৩১। আত্মশুদ্ধির গল্প</string>
+    <string name="SN32">৩২। এ অবস্থা থেকে মুসলিম তরুণ প্রজন্মের উত্তোরণের পথ কী?</string>
+    <string name="SN33">৩৩। অনুতপ্ত অশ্রু</string>
+    <string name="SN34">৩৪। হে তরুণ! উম্মাহ ডাকছে তোমায়</string>
+    <string name="SN35">৩৫। খালিদ বিন ওয়ালিদ রা.</string>
+    <string name="SN36">৩৬। হযরত খালিদ বিন ওয়ালিদ রা.-এর ইসলাম গ্রহণ</string>
+    <string name="SN37">৩৭। রোমানদের বিরুদ্ধে যুদ্ধ</string>
+    <string name="SN38">৩৮। মক্কা বিজয় ও খালিদ বিন ওয়ালিদ রা:</string>
+    <string name="SN39">৩৯। রাসুলের মৃত্যু-পরবর্তী সৃষ্ট ফেতনার মোকাবেলা</string>
+    <string name="SN40">৪০। ফের নতুন যুদ্ধের ডাক</string>
+    <string name="SN41">৪১। সেনাপতির দায়িত্ব থেকে অব্যাহতির কারণ</string>
+
+
+    <string name="nav_open">Navigation Open</string>
+    <string name="nav_close">Navigation Close</string>
+
+    <string name="home">Home</string>
+    <string name="book_writer">Book Writer</string>
+    <string name="about_apps">About Book</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="other_application">Other Application</string>
+    <string name="aber_vinno_kisu_hoq_app">Abar Vinno Kichu Hok</string>
+    <string name="ahobban_book">Ahobban Book</string>
+    <string name="more_apps">More Apps</string>
+    <string name="communication">Communication</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="website">My Website</string>
+    <string name="share">Share</string>
+    <string name="social_account">Social Account</string>
+    <string name="facebook_page">Dev Facebook Page</string>
+    <string name="facebook_group">Facebook Group</string>
+    <string name="youtube_toufik">Dev Youtube</string>
+    <string name="youtube_tauhid">Youtube</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="join_our_group">গ্রুপে জয়েন করার পরামর্শ?</string>
+    <string name="group_join_about">এই অ্যাপ্সের যেকোন সমস্যায় আমারদের গ্রপে জয়েন করুন, এবং একটি স্কিন শর্ট পোষ্ট করুন। তাছাড়াও আপনি গ্রপে বই থেকে আপনার ভালো লাগা অংশ আমাদের সাথে শিয়ার করতে পারবেন। আর আপনি যদি আগে জয়েন করে থাকেন তাহলে “আমি জয়েন করেছি!” বাটুনে ক্লিক করুন।\nসহযোগিতার জন্য ধন্যবাদ।</string>
+    <string name="already_join_group">আমি জয়েন করেছি!</string>
+    <string name="JoinNow">জয়েন</string>
+    <string name="update_app">Update App</string>
+    <string name="rate_app">Rate App</string>
+</resources>
