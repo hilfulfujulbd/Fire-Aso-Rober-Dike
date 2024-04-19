@@ -75,4 +75,11 @@
     <string name="JoinNow">জয়েন</string>
     <string name="update_app">Update App</string>
     <string name="rate_app">Rate App</string>
+
+
+    <string name="ads_app_id">ca-app-pub-5980068077636654~6840967250</string>
+    <string name="textShow_page_image_ads_id">ca-app-pub-5980068077636654/3509935719</string>
+    <string name="ads_Type">BANNER</string>
+    <string name="home_page_banner_ads_id">ca-app-pub-5980068077636654/4823017384</string>
+    <string name="text_page_banner_ads_id">ca-app-pub-5980068077636654/6998588738</string>
 </resources>
