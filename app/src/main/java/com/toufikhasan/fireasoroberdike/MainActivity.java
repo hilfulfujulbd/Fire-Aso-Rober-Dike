@@ -249,15 +249,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             gotoUrl("http://toufikhasan.com");
             Toast.makeText(MainActivity.this, "আমার ওয়েবসাইট", Toast.LENGTH_SHORT).show();
         } else if (item.getItemId() == R.id.shair) {
-            Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
-            shareIntent.setType("text/plain");
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
-            String shareMassage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
-            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
+            Intent shareIntent = getShareIntent();
 
             startActivity(Intent.createChooser(shareIntent, "ShareVia"));
         }
         return false;
+    }
+
+    @NonNull
+    private static Intent getShareIntent() {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
+        String shareMassage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
+        return shareIntent;
     }
 
     private void startActivityFile(String title, String fileName) {
