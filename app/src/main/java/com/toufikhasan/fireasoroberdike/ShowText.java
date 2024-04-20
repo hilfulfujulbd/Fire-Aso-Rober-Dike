@@ -1,11 +1,8 @@
 package com.toufikhasan.fireasoroberdike;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -15,10 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.toufikhasan.fireasoroberdike.AdsControl.AdsController;
+import com.google.android.gms.ads.FullScreenContentCallback;
 import com.toufikhasan.fireasoroberdike.Setting.InternetCheck;
+import com.toufikhasan.fireasoroberdike.admob.InterstitialAds;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,50 +25,24 @@ import java.util.Objects;
 public class ShowText extends AppCompatActivity {
     public static final String FILE_NAME = "FILE_NAME";
     public static final String TITLE_NAME = "TITLE_NAME";
-    private String filename;
-
-    private AdView mAdView;
-    private CountDownTimer countDownTimer;
-
-    AdsController adsController;
     LinearLayout bannerAdsLayout;
     InternetCheck internetCheck;
+    private String filename;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_text);
 
-        // Banner Ads
-        MobileAds.initialize(this, initializationStatus -> {
-        });
-
         bannerAdsLayout = findViewById(R.id.bannerAdsLayout);
         mAdView = findViewById(R.id.adView);
 
-        adsController = new AdsController(this);
-
         internetCheck = new InternetCheck(getApplicationContext());
+
         if (internetCheck.isConnected()) {
-            if (mAdView != null) {
-                adsController.loadBannerAds(mAdView);
-                mAdView.setAdListener(new AdListener() {
-                    @Override
-                    public void onAdLoaded() {
-                        super.onAdLoaded();
-                        bannerAdsLayout.setVisibility(View.VISIBLE);
-                    }
-                });
-            } else {
-                bannerAdsLayout.setVisibility(View.GONE);
-            }
-
-            if (countDownTimer == null) {
-                imageAdsLoadAfterSomeTime(5000);
-                countDownTimer.start();
-            }
+            showAdsConfig();
         }
-
 
         Intent intent = getIntent();
         filename = intent.getStringExtra(FILE_NAME);
@@ -83,30 +55,6 @@ public class ShowText extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         fileRead();
-    }
-
-    public void imageAdsLoadAfterSomeTime(final long milliseconds) {
-        if (countDownTimer != null) {
-            countDownTimer.cancel();
-        }
-
-        countDownTimer = new CountDownTimer(milliseconds, 50) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                adsController.loadInterstitialAds();
-            }
-        };
-    }
-
-    @Override
-    public void onBackPressed() {
-        adsController.showInterstitialAds();
-        super.onBackPressed();
     }
 
     @Override
@@ -138,6 +86,40 @@ public class ShowText extends AppCompatActivity {
         showText.setText(text);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (InterstitialAds.mInterstitialAd != null) {
+            InterstitialAds.mInterstitialAd.show(this);
+            InterstitialAds.mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent();
+                    InterstitialAds.mInterstitialAd = null;
+                    CountTimer.startTimer(() -> InterstitialAds.loadInterstitialAd(getApplicationContext()));
+                }
+            });
+        }
+        super.onBackPressed();
+    }
+
+    private void showAdsConfig() {
+        if (mAdView != null) {
+            mAdView.loadAd(new AdRequest.Builder().build());
+            mAdView.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    super.onAdLoaded();
+                    bannerAdsLayout.setVisibility(View.VISIBLE);
+                }
+            });
+        } else {
+            bannerAdsLayout.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Called when leaving the activity
+     */
     @Override
     public void onPause() {
         if (mAdView != null) {

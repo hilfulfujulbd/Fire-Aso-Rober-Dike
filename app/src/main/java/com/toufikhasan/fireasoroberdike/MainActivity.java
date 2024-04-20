@@ -2,19 +2,13 @@ package com.toufikhasan.fireasoroberdike;
 
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,11 +21,6 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -42,46 +31,32 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;
-import com.toufikhasan.fireasoroberdike.AdsControl.AdsController;
-import com.toufikhasan.fireasoroberdike.Setting.InternetCheck;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public final int UPDATE_IN_APP_CODE = 2787;
-    private static final long LENGTH_MILLISECONDS = 1000;
-    private CountDownTimer countDownTimer;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     GridLayout gridLayout;
     ReviewManager manager;
     ReviewInfo reviewInfo;
 
-    InternetCheck internetCheck;
-    AdView mAdView;
-    LinearLayout bannerAdsLayout;
-    AdsController adsController;
+    @NonNull
+    private static Intent getShareIntent() {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
+        String shareMassage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
+        return shareIntent;
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Banner Ads
-        bannerAdsLayout = findViewById(R.id.bannerAdsLayout);
-        mAdView = findViewById(R.id.adView);
-
-        internetCheck = new InternetCheck(getApplicationContext());
-        adsController = new AdsController(this);
-
-        MobileAds.initialize(this, initializationStatus -> {
-        });
-
-        if (countDownTimer == null) {
-            bannerAdsLoadAfterSomeTime(LENGTH_MILLISECONDS);
-            countDownTimer.start();
-        }
 
         //Drawer Layout
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -102,79 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         gridLayout = findViewById(R.id.gridLayoutId);
 
         onClickCardItem();
-
-        if (!preferencesVisibleDialog()) {
-            JOIN_OUR_GROUP_DIALOG();
-        }
-
     }
-
-    /**
-     * Called when leaving the activity
-     */
-    @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
-    }
-
-    /**
-     * Called when returning to the activity
-     */
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-    }
-
-    /**
-     * Called before the activity is destroyed
-     */
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
-    }
-
-    public void bannerAdsLoadAfterSomeTime(final long milliseconds) {
-        if (countDownTimer != null) {
-            countDownTimer.cancel();
-        }
-
-        countDownTimer = new CountDownTimer(milliseconds, 50) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                if (internetCheck.isConnected()) {
-                    // TODO: GOOGLE ADS LOADER
-                    if (mAdView != null) {
-                        adsController.loadBannerAds(mAdView);
-                        mAdView.setAdListener(new AdListener() {
-                            @Override
-                            public void onAdLoaded() {
-                                super.onAdLoaded();
-                                bannerAdsLayout.setVisibility(View.VISIBLE);
-                            }
-                        });
-                    } else {
-                        bannerAdsLayout.setVisibility(View.GONE);
-                    }
-
-                }
-            }
-        };
-    }
-
 
     private void onClickCardItem() {
         int gridChild = gridLayout.getChildCount();
@@ -353,16 +256,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
-    @NonNull
-    private static Intent getShareIntent() {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
-        String shareMassage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
-        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
-        return shareIntent;
-    }
-
     private void startActivityFile(String title, String fileName) {
         Intent intent = new Intent(MainActivity.this, ShowText.class);
         intent.putExtra(ShowText.TITLE_NAME, title);
@@ -372,39 +265,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void gotoUrl(String link) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
-    }
-
-
-    private void JOIN_OUR_GROUP_DIALOG() {
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.custom_dialog_box_for_join_groph);
-        dialog.setCancelable(false);
-        Button JOIN = dialog.findViewById(R.id.join_now);
-        JOIN.setOnClickListener(v -> {
-            gotoUrl("https://www.facebook.com/groups/books.my.friend");
-            dialog.dismiss();
-        });
-        TextView alreadyJOIN = dialog.findViewById(R.id.already_join);
-        alreadyJOIN.setOnClickListener(v -> {
-            preferencesSaveData();
-            dialog.dismiss();
-        });
-        ImageView close = dialog.findViewById(R.id.closeDialog);
-        close.setOnClickListener(v -> dialog.dismiss());
-        dialog.show();
-    }
-
-    private boolean preferencesVisibleDialog() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("saveDialog", MODE_PRIVATE);
-        return sharedPreferences.getBoolean("group_join", false);
-    }
-
-    @SuppressLint("ApplySharedPref")
-    private void preferencesSaveData() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("saveDialog", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean("group_join", true);
-        editor.commit();
     }
 
 

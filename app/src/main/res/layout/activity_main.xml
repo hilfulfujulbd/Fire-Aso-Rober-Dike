@@ -1120,22 +1120,6 @@
             </ScrollView>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/bannerAdsLayout"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:visibility="gone">
-
-            <!--    Ads View    -->
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:adSize="@string/ads_Type"
-                app:adUnitId="@string/home_page_banner_ads_id" />
-        </LinearLayout>
-
     </LinearLayout>
 
 
@@ -1146,6 +1130,6 @@
         android:layout_gravity="start"
         android:background="#fff"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/navication_menu_item"></com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/navication_menu_item" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
