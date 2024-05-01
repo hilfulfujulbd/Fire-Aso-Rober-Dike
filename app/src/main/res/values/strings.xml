@@ -66,8 +66,7 @@
     <string name="social_account">Social Account</string>
     <string name="facebook_page">Dev Facebook Page</string>
     <string name="facebook_group">Facebook Group</string>
-    <string name="youtube_toufik">Dev Youtube</string>
-    <string name="youtube_tauhid">Youtube</string>
+    <string name="youtube">Youtube</string>
     <string name="linkedin">Linkedin</string>
     <string name="update_app">Update App</string>
     <string name="rate_app">Rate App</string>

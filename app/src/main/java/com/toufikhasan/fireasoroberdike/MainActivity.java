@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
-        String shareMassage = "https://play.google.com/store/apps/details?id=" + getShareIntent().getPackage() + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
+        String shareMassage = "https://play.google.com/store/apps/details?id=com.toufikhasan.fireasoroberdike\n\nওয়েবসাইটঃ https://hilfulfujul.org\n\nThanks for viewing.";
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
         return shareIntent;
     }
@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (item.getItemId() == R.id.about_us) {
             startActivityFile("বই সম্পর্কে", "bookinfo.txt");
         } else if (item.getItemId() == R.id.privacy) {
-            gotoUrl("http://toufikhasan.com/android-apk/book/fire-aso-rober-dike/privacy-policy.html");
+            gotoUrl("https://blog.hilfulfujul.org/p/privacy-policy-for-hea-jubok-fire-aso.html");
         } else if (item.getItemId() == R.id.update_app) {
             IN_APP_UPDATE();
         } else if (item.getItemId() == R.id.abar_vinno_kisu_hok) {
@@ -235,20 +235,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (item.getItemId() == R.id.ratting) {
             IN_APP_REVIEW();
         } else if (item.getItemId() == R.id.contact_us) {
-            startActivityFile("যোগাযোগ পেইজ", "contact_us.txt");
+            gotoUrl("https://hilfulfujul.org/about-us/");
         } else if (item.getItemId() == R.id.facebook_page) {
-            gotoUrl("https://www.facebook.com/toufik.bd.official");
+            gotoUrl("https://hilfulfujul.org/facebook/");
         } else if (item.getItemId() == R.id.facebook_group) {
-            gotoUrl("https://www.facebook.com/groups/books.my.friend");
+            gotoUrl("https://hilfulfujul.org/facebook-group/");
         } else if (item.getItemId() == R.id.youtube) {
-            gotoUrl("https://www.youtube.com/channel/UCJWmYNTgEvJsDm0zqj3lIxw");
-        } else if (item.getItemId() == R.id.youtube2) {
-            gotoUrl("https://www.youtube.com/channel/UCSw15OyHP_dEzEyHQALwjzw");
+            gotoUrl("https://hilfulfujul.org/youtube/");
         } else if (item.getItemId() == R.id.linkedin) {
-            gotoUrl("https://www.linkedin.com/in/ownertoufikhasan/");
+            gotoUrl("https://hilfulfujul.org/linkedin/");
         } else if (item.getItemId() == R.id.website) {
-            gotoUrl("http://toufikhasan.com");
-            Toast.makeText(MainActivity.this, "আমার ওয়েবসাইট", Toast.LENGTH_SHORT).show();
+            gotoUrl("https://hilfulfujul.org/");
         } else if (item.getItemId() == R.id.shair) {
             Intent shareIntent = getShareIntent();
 
