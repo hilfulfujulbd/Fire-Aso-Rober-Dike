@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "He jubok, Fire aso rober dike App contact");
-        String shareMassage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
+        String shareMassage = "https://play.google.com/store/apps/details?id=" + getShareIntent().getPackage() + "\n\nওয়েবসাইটঃ https://toufikhasan.com\nকম্পানির ওয়েবসাইটঃ\nhttp://hilfulfujul.com.bd\n\nThanks for viewing.";
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareMassage);
         return shareIntent;
     }
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //version show in nav_header.xml file
         View header = navigationView.getHeaderView(0);
         TextView versionText = header.findViewById(R.id.versionCode);
-        versionText.setText("Version: " + BuildConfig.VERSION_CODE + " || " + BuildConfig.VERSION_NAME);
+        versionText.setText("Version: 2.0.0");
 
         //Grid Layout on Item On Click
         gridLayout = findViewById(R.id.gridLayoutId);
