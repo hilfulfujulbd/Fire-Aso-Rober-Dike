@@ -9,12 +9,13 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.toufikhasan.fireasoroberdike.R;
+import com.toufikhasan.fireasoroberdike.Setting.InternetCheck;
 
 public class InterstitialAds {
     public static InterstitialAd mInterstitialAd;
 
     public static void loadInterstitialAd(Context context) {
-        if (mInterstitialAd == null) {
+        if (mInterstitialAd == null && InternetCheck.isConnected(context)) {
             AdRequest adRequest = new AdRequest.Builder().build();
             InterstitialAd.load(context, context.getString(R.string.textShow_page_image_ads_id), adRequest, new InterstitialAdLoadCallback() {
                 @Override

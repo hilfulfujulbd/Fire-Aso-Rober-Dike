@@ -69,17 +69,10 @@
     <string name="youtube_toufik">Dev Youtube</string>
     <string name="youtube_tauhid">Youtube</string>
     <string name="linkedin">Linkedin</string>
-    <string name="join_our_group">গ্রুপে জয়েন করার পরামর্শ?</string>
-    <string name="group_join_about">এই অ্যাপ্সের যেকোন সমস্যায় আমারদের গ্রপে জয়েন করুন, এবং একটি স্কিন শর্ট পোষ্ট করুন। তাছাড়াও আপনি গ্রপে বই থেকে আপনার ভালো লাগা অংশ আমাদের সাথে শিয়ার করতে পারবেন। আর আপনি যদি আগে জয়েন করে থাকেন তাহলে “আমি জয়েন করেছি!” বাটুনে ক্লিক করুন।\nসহযোগিতার জন্য ধন্যবাদ।</string>
-    <string name="already_join_group">আমি জয়েন করেছি!</string>
-    <string name="JoinNow">জয়েন</string>
     <string name="update_app">Update App</string>
     <string name="rate_app">Rate App</string>
 
 
     <string name="ads_app_id">ca-app-pub-5980068077636654~6840967250</string>
     <string name="textShow_page_image_ads_id">ca-app-pub-5980068077636654/3509935719</string>
-    <string name="ads_Type">BANNER</string>
-    <string name="home_page_banner_ads_id">ca-app-pub-5980068077636654/4823017384</string>
-    <string name="text_page_banner_ads_id">ca-app-pub-5980068077636654/6998588738</string>
 </resources>

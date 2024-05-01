@@ -4,18 +4,12 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
-import com.toufikhasan.fireasoroberdike.Setting.InternetCheck;
 import com.toufikhasan.fireasoroberdike.admob.InterstitialAds;
 
 import java.io.IOException;
@@ -25,24 +19,14 @@ import java.util.Objects;
 public class ShowText extends AppCompatActivity {
     public static final String FILE_NAME = "FILE_NAME";
     public static final String TITLE_NAME = "TITLE_NAME";
-    LinearLayout bannerAdsLayout;
-    InternetCheck internetCheck;
+
     private String filename;
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_text);
 
-        bannerAdsLayout = findViewById(R.id.bannerAdsLayout);
-        mAdView = findViewById(R.id.adView);
-
-        internetCheck = new InternetCheck(getApplicationContext());
-
-        if (internetCheck.isConnected()) {
-            showAdsConfig();
-        }
 
         Intent intent = getIntent();
         filename = intent.getStringExtra(FILE_NAME);
@@ -100,53 +84,5 @@ public class ShowText extends AppCompatActivity {
             });
         }
         super.onBackPressed();
-    }
-
-    private void showAdsConfig() {
-        if (mAdView != null) {
-            mAdView.loadAd(new AdRequest.Builder().build());
-            mAdView.setAdListener(new AdListener() {
-                @Override
-                public void onAdLoaded() {
-                    super.onAdLoaded();
-                    bannerAdsLayout.setVisibility(View.VISIBLE);
-                }
-            });
-        } else {
-            bannerAdsLayout.setVisibility(View.GONE);
-        }
-    }
-
-    /**
-     * Called when leaving the activity
-     */
-    @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
-    }
-
-    /**
-     * Called when returning to the activity
-     */
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-    }
-
-    /**
-     * Called before the activity is destroyed
-     */
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
     }
 }

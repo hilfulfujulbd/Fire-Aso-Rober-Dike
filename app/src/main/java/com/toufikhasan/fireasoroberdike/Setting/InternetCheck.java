@@ -5,12 +5,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 public class InternetCheck {
-    Context context;
-    public InternetCheck(Context context) {
-        this.context = context;
-    }
 
-    public boolean isConnected() {
+    public static boolean isConnected(Context context) {
 
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 

@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowText">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/showText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:id="@+id/showText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:textColor="@color/black"
-            android:textIsSelectable="true"
-            android:textSize="19sp" />
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/bannerAdsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="?attr/colorPrimary"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone">
-
-        <!--    Ads View    -->
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:adSize="@string/ads_Type"
-            app:adUnitId="@string/text_page_banner_ads_id" />
-    </LinearLayout>
-
-</RelativeLayout>
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+</ScrollView>
